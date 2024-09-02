@@ -15,6 +15,12 @@ app.get("/user",(request,response)=>{
     })
 })
 
+app.get("/user/:nome",(request,response)=>{
+    response.send({
+        name:request.params.nome
+    })
+})
+
 app.delete("/user",(request,response)=>{
     response.send({
         message:"deletado com sucesso "
